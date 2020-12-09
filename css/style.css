@@ -76,19 +76,10 @@ body {
   line-height: 1.6; }
 
 .heading-1 {
-  font-size: 6rem;
+  font-size: calc(2rem + 2.7vw);
   font-weight: 800;
   color: #fff;
   line-height: 1.2; }
-  @media only screen and (max-width: 58.44em) {
-    .heading-1 {
-      font-size: 4.5rem; } }
-  @media only screen and (max-width: 40.44em) {
-    .heading-1 {
-      font-size: 3.5rem; } }
-  @media only screen and (max-width: 32em) {
-    .heading-1 {
-      font-size: 2.8rem; } }
   .heading-1--main {
     animation: moveInRight 1s ease-out;
     display: block; }
@@ -97,33 +88,20 @@ body {
     display: block; }
 
 .heading-2 {
-  font-size: 3.4rem;
+  font-size: calc(2rem + 1vw);
   font-weight: 600; }
   @media only screen and (max-width: 53.25em) {
     .heading-2 {
       text-align: center; } }
-  @media only screen and (max-width: 40.44em) {
-    .heading-2 {
-      font-size: 3rem; } }
-  @media only screen and (max-width: 32em) {
-    .heading-2 {
-      font-size: 2.5rem; } }
   .heading-2--light {
     color: #fff; }
 
 .heading-3 {
-  font-size: 2.3rem;
+  font-size: 2.2rem;
   font-weight: 600; }
-
-.heading-4 {
-  font-size: 2rem;
-  font-weight: 600; }
-  @media only screen and (max-width: 39.44em) {
-    .heading-4 {
-      font-size: 1.8rem; } }
-  .heading-4--light {
+  .heading-3--light {
     color: #fff; }
-  .heading-4--thin {
+  .heading-3--thin {
     font-weight: 400; }
 
 .paragraph {
