@@ -1,0 +1,23 @@
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-white;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  background-color: $color-primary;
+  padding: 1.5rem 3.5rem;
+  border-radius: 3px;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+
+  &--header {
+    animation: moveInUp 0.5s ease-out 0.75s;
+    animation-fill-mode: backwards;
+    justify-self: center;
+  }
+
+  &:hover {
+    @include hoverEffect;
+  }
+}
