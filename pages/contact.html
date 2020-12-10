@@ -95,35 +95,84 @@
             <a href="gallery.html" class="nav__right--link"> Gallery </a>
           </li>
           <li class="nav__right--item">
-            <a href="pricing.html" class="nav__right--link nav-active">
-              Pricing
-            </a>
+            <a href="pricing.html" class="nav__right--link"> Pricing </a>
           </li>
           <li class="nav__right--item">
             <a href="blogs.html" class="nav__right--link"> Blog </a>
           </li>
           <li class="nav__right--item">
-            <a href="contact.html" class="nav__right--link"> Contact</a>
+            <a href="contact.html" class="nav__right--link nav-active">
+              Contact</a
+            >
           </li>
         </ul>
       </div>
     </nav>
     <!--? ===================================== FORM ===================================== -->
-    <section class="contact__form">
-      <h2 class="heading-2 center-heading">Contact Form</h2>
+    <section class="contact__us">
+      <h2 class="heading-2 center-heading mb-lg">Contact Form</h2>
       <div class="row">
-        <div class="contact__form--address">address</div>
-        <div class="contact__form--phone">phone</div>
-        <div class="contact__form--email">email</div>
-        <div class="contact__form--website">website</div>
+        <div class="contact__us--box">
+          <span>
+            <svg class="contact__us--icon">
+              <use xlink:href="../img/sprite.svg#pin"></use>
+            </svg>
+          </span>
+          <p class="paragraph">
+            <strong>Address:</strong> 198 West 21th Street, Suite 721 New York
+            NY 10016
+          </p>
+        </div>
+        <div class="contact__us--box">
+          <span>
+            <svg class="contact__us--icon">
+              <use xlink:href="../img/sprite.svg#call"></use>
+            </svg>
+          </span>
+          <p class="paragraph">
+            <strong> Phone:</strong><a href="#0"> + 1235 2355 98</a>
+          </p>
+        </div>
+        <div class="contact__us--box">
+          <span>
+            <svg class="contact__us--icon">
+              <use xlink:href="../img/sprite.svg#send"></use>
+            </svg>
+          </span>
+          <p class="paragraph">
+            <strong>Email: </strong><a href="#0">info@yoursite.com</a>
+          </p>
+        </div>
+        <div class="contact__us--box">
+          <span>
+            <svg class="contact__us--icon">
+              <use xlink:href="../img/sprite.svg#worldwide"></use>
+            </svg>
+          </span>
+          <p class="paragraph">
+            <strong>Website: </strong> <a href="#0">yoursite.com</a>
+          </p>
+        </div>
       </div>
+    </section>
+    <section class="contact__container">
+      <form action="" class="contact__container--form">
+        <h3 class="heading-3 heading-3--thin">Contact us</h3>
+      </form>
+      <figure class="contact__container--item">
+        <img
+          src="../img/contact.jpg"
+          alt="contact"
+          class="contact__container--img"
+        />
+      </figure>
     </section>
     <!--? ===================================== FOOTER ===================================== -->
     <footer class="footer">
       <div class="row">
         <div class="footer__box">
           <div class="bottomLine mb-md">
-            <h4 class="heading-4 heading-4--light">Petsitting</h4>
+            <h3 class="heading-3 heading-3--light">Petsitting</h3>
           </div>
           <p class="footer--text mb-sm">
             A small river named Duden flows by their place and supplies it with
@@ -155,7 +204,7 @@
         </div>
         <div class="footer__box">
           <div class="bottomLine mb-md">
-            <h4 class="heading-4 heading-4--light">Latest News</h4>
+            <h3 class="heading-3 heading-3--light">Latest News</h3>
           </div>
           <div class="footer__blog mb-md">
             <img
@@ -190,11 +239,11 @@
         </div>
         <div class="footer__box">
           <div class="bottomLine mb-md">
-            <h4 class="heading-4 heading-4--light">Quick Links</h4>
+            <h3 class="heading-3 heading-3--light">Quick Links</h3>
           </div>
           <ul class="footer__list">
             <li class="footer__list--item">
-              <a href="about.html" class="footer__list--link">Home </a>
+              <a href="contact.html" class="footer__list--link">Home </a>
             </li>
             <li class="footer__list--item">
               <a href="about.html" class="footer__list--link"> About </a>
@@ -215,7 +264,7 @@
         </div>
         <div class="footer__box">
           <div class="bottomLine mb-md">
-            <h4 class="heading-4 heading-4--light">Have a Questions?</h4>
+            <h3 class="heading-3 heading-3--light">Have a Questions?</h3>
           </div>
           <p class="footer__contact">
             <a href="#0" class="footer__contact--link">
