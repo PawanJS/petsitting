@@ -31,6 +31,6 @@
   transform: translateX(0);
 
   &:hover {
-    @include shadowOnHover;
+    @extend %shadowOnHover;
   }
 }

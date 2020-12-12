@@ -8,11 +8,11 @@
   }
 
   &--box {
-    @include shadowForBox;
+    @extend %shadowForBox;
     @extend %sameMediaQuery;
 
     &:hover {
-      @include shadowOnHover;
+      @extend %shadowOnHover;
     }
   }
 

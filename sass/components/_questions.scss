@@ -41,7 +41,7 @@
   &--box {
     background-color: $color-white;
     margin-bottom: 1rem;
-    @include shadowForBox;
+    @extend %shadowForBox;
     border-radius: 3rem;
   }
 

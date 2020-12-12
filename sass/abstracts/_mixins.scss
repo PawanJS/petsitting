@@ -12,29 +12,23 @@
   justify-items: center;
 }
 
-@mixin hoverEffect {
-  background-color: $color-white;
-  border: 1px solid $color-primary;
-  color: $color-primary;
-}
-
-@mixin shadowForBox {
-  border-radius: 5px;
-  background-color: $color-white;
-  box-shadow: 0 1.5rem 3rem rgba($color-dark, 0.15);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-@mixin shadowOnHover {
-  transform: translateY(-5px) scale(1.01);
-  box-shadow: 0 3rem 6rem rgba($color-dark, 0.2);
-}
-
 @mixin hoverColor {
   transition: color 0.2s;
   &:hover {
     color: $color-primary;
   }
+}
+
+%shadowForBox {
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 1.5rem 3rem rgba(#000, 0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+%shadowOnHover {
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 3rem 6rem rgba(#000, 0.2);
 }
 
 //* ======== MEDIA QUERY MANAGER

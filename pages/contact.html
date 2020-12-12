@@ -157,7 +157,55 @@
     </section>
     <section class="contact__container">
       <form action="" class="contact__container--form">
-        <h3 class="heading-3 heading-3--thin">Contact us</h3>
+        <h3 class="heading-2 heading-3--thin mb-lg">Contact us</h3>
+        <div class="contact__container--name">
+          <label for="name" class="contact__container--label">Full Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            class="contact__container--field"
+            placeholder="Name"
+            required
+          />
+        </div>
+        <div class="contact__container--email">
+          <label for="email" class="contact__container--label"> Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            class="contact__container--field"
+            placeholder="Email"
+            required
+          />
+        </div>
+        <div class="contact__container--subject">
+          <label for="subject" class="contact__container--label">
+            Subject
+          </label>
+          <input
+            type="text"
+            name="subject"
+            id="subject"
+            class="contact__container--field"
+            placeholder="Subject"
+            required
+          />
+        </div>
+        <div class="contact__container--message">
+          <label for="message" class="contact__container--label">message</label>
+          <textarea
+            name="message"
+            id="message"
+            cols="20"
+            rows="5"
+            class="contact__container--field"
+            placeholder="Message"
+            required
+          ></textarea>
+        </div>
+        <button class="btn btn--contact">send message</button>
       </form>
       <figure class="contact__container--item">
         <img

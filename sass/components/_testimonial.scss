@@ -14,7 +14,7 @@
   &--box {
     position: relative;
     padding: 3rem;
-    @include shadowForBox;
+    @extend %shadowForBox;
 
     &:nth-of-type(3) {
       @include respond(tab-port) {
