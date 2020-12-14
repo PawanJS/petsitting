@@ -145,6 +145,7 @@
   &__checkbox:checked ~ &__right > &__right--list {
     flex-direction: column;
     justify-content: center;
+    max-height: 100vh;
   }
 
   &__checkbox:checked + &__button &__icon {

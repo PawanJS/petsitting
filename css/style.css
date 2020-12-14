@@ -207,6 +207,9 @@ body {
   .btn--contact {
     align-self: center;
     justify-self: start; }
+    @media only screen and (max-width: 39.44em) {
+      .btn--contact {
+        grid-column: 1 / -1; } }
   .btn:hover {
     background-color: #fff;
     border: 1px solid #00bd56;
@@ -623,10 +626,12 @@ body {
     cursor: pointer;
     transition: all 0.2s; }
   .questions__answer {
-    padding: 3rem;
+    padding: 0 3rem;
     font-size: 1.6rem; }
   .questions__answer--1, .questions__answer--2, .questions__answer--3, .questions__answer--4 {
-    display: none; }
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s; }
   .questions__answer--item {
     display: flex; }
     .questions__answer--item:not(:last-of-type) {
@@ -673,7 +678,8 @@ body {
   .questions__checkbox--2:checked ~ .questions__answer--2,
   .questions__checkbox--3:checked ~ .questions__answer--3,
   .questions__checkbox--4:checked ~ .questions__answer--4 {
-    display: block; }
+    padding: 3rem;
+    max-height: 100vh; }
   .questions__checkbox--1:checked ~ .questions__toggle--1 .questions--box,
   .questions__checkbox--2:checked ~ .questions__toggle--2 .questions--box,
   .questions__checkbox--3:checked ~ .questions__toggle--3 .questions--box,
@@ -1019,7 +1025,8 @@ body {
     display: flex; }
   .nav__checkbox:checked ~ .nav__right > .nav__right--list {
     flex-direction: column;
-    justify-content: center; }
+    justify-content: center;
+    max-height: 100vh; }
   .nav__checkbox:checked + .nav__button .nav__icon {
     background-color: transparent; }
   .nav__checkbox:checked + .nav__button .nav__icon::before {

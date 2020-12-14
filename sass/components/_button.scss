@@ -19,6 +19,10 @@
   &--contact {
     align-self: center;
     justify-self: start;
+
+    @include respond(phone) {
+      grid-column: 1 / -1;
+    }
   }
 
   &:hover {

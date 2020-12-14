@@ -55,7 +55,7 @@
   }
 
   &__answer {
-    padding: 3rem;
+    padding: 0 3rem;
     font-size: 1.6rem;
   }
 
@@ -63,7 +63,9 @@
   &__answer--2,
   &__answer--3,
   &__answer--4 {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s;
   }
 
   &__answer--item {
@@ -127,7 +129,8 @@
   &__checkbox--2:checked ~ &__answer--2,
   &__checkbox--3:checked ~ &__answer--3,
   &__checkbox--4:checked ~ &__answer--4 {
-    display: block;
+    padding: 3rem;
+    max-height: 100vh;
   }
 
   &__checkbox--1:checked ~ &__toggle--1 &--box,
