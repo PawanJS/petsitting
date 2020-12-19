@@ -779,6 +779,9 @@ body {
     .staff__text--box p {
       font-size: 1.8rem; }
 
+.veterinarian {
+  grid-column: 1 / -1; }
+
 .testimonial {
   grid-column: full-start / full-end;
   background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url("../img/bg_2.jpg") center center/cover;
