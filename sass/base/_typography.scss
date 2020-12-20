@@ -22,7 +22,7 @@ body {
 }
 
 .heading-2 {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(2rem + 1.5vw);
   font-weight: 600;
 
   @include respond(medium-tab) {
@@ -35,7 +35,7 @@ body {
 }
 
 .heading-3 {
-  font-size: 2.2rem;
+  font-size: calc(1.6rem + 1.1vh);
   font-weight: 600;
 
   &--light {
@@ -45,9 +45,18 @@ body {
     font-weight: 400;
   }
 }
+.heading-4 {
+  font-size: calc(1.4rem + 0.9vh);
+  font-weight: 600;
+}
+
+.heading-5 {
+  font-size: calc(1.4rem + 0.5vh);
+  color: $color-primary;
+}
 
 .paragraph {
-  font-size: 1.7rem;
+  font-size: calc(1.4rem + 0.5vh);
   color: $color-grey-light;
 
   @include respond(small-phone) {

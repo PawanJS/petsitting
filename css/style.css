@@ -1,4 +1,4 @@
-.blog--box, .contact__container--form, .package--box, .questions__answer, .questions--box, .testimonial--box {
+.blog--box, .contact__container--form, .package--box, .questions__answer, .questions--box, .veterinarian__box, .testimonial--box {
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
@@ -98,7 +98,7 @@ body {
     display: block; }
 
 .heading-2 {
-  font-size: calc(2rem + 1vw);
+  font-size: calc(2rem + 1.5vw);
   font-weight: 600; }
   @media only screen and (max-width: 53.25em) {
     .heading-2 {
@@ -107,15 +107,23 @@ body {
     color: #fff; }
 
 .heading-3 {
-  font-size: 2.2rem;
+  font-size: calc(1.6rem + 1.1vh);
   font-weight: 600; }
   .heading-3--light {
     color: #fff; }
   .heading-3--thin {
     font-weight: 400; }
 
+.heading-4 {
+  font-size: calc(1.4rem + 0.9vh);
+  font-weight: 600; }
+
+.heading-5 {
+  font-size: calc(1.4rem + 0.5vh);
+  color: #00bd56; }
+
 .paragraph {
-  font-size: 1.7rem;
+  font-size: calc(1.4rem + 0.5vh);
   color: #a6a6a6; }
   @media only screen and (max-width: 32em) {
     .paragraph {
@@ -780,7 +788,64 @@ body {
       font-size: 1.8rem; }
 
 .veterinarian {
-  grid-column: 1 / -1; }
+  padding: 10rem 0;
+  grid-column: center-start / center-end; }
+  .veterinarian__box {
+    text-align: center;
+    display: grid; }
+  .veterinarian__item {
+    position: relative;
+    overflow: hidden; }
+  .veterinarian__img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.2s; }
+  .veterinarian__icon-box {
+    position: absolute;
+    bottom: -5rem;
+    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 60%;
+    margin-left: 20%;
+    transition: all 0.3s; }
+    .veterinarian__icon-box span {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #207dff, #00bd56);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .veterinarian--icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: #fff; }
+  .veterinarian__description {
+    padding: 2rem;
+    transition: all 0.2s; }
+    .veterinarian__description p,
+    .veterinarian__description h4,
+    .veterinarian__description h5 {
+      transition: all 0.2s; }
+  .veterinarian__box:hover .veterinarian__img {
+    transform: scale(1.05); }
+  .veterinarian__box:hover .veterinarian__description {
+    background-color: #00bd56;
+    color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px; }
+  .veterinarian__box:hover .veterinarian__description > p {
+    color: #fff; }
+  .veterinarian__box:hover .veterinarian__description > h5 {
+    color: #000000; }
+  .veterinarian__box:hover .veterinarian__icon-box {
+    bottom: 2rem;
+    opacity: 1; }
 
 .testimonial {
   grid-column: full-start / full-end;
