@@ -1,7 +1,7 @@
 "use script";
 
 const pictures = document.querySelectorAll(".gallery__item");
-const closeBtn = document.querySelectorAll(".close-btn");
+const closeBtn = document.querySelector(".close-btn");
 const openBtn = document.querySelectorAll(".gallery--link");
 const overlay = document.getElementById("overlay");
 const imageOverlay = document.querySelectorAll(".gallery--overlay");
@@ -17,29 +17,33 @@ const closeImage = function (element) {
   overlay.classList.remove("active");
 };
 
+const closeOnOutsideClick = function () {
+  for (let i = 0; i < pictures.length; i++) {
+    closeImage(pictures[i]);
+    closeBtn.classList.add("hidden");
+    openBtn[i].classList.remove("hidden");
+    figcaption[i].classList.remove("hidden");
+    imageOverlay[i].classList.remove("hidden");
+  }
+};
+
 for (let i = 0; i < pictures.length; i++) {
   openBtn[i].addEventListener("click", function () {
     openImage(pictures[i]);
     openBtn[i].classList.add("hidden");
     figcaption[i].classList.add("hidden");
     imageOverlay[i].classList.add("hidden");
-    closeBtn[i].classList.remove("hidden");
+    closeBtn.classList.remove("hidden");
   });
-  closeBtn[i].addEventListener("click", function () {
-    closeImage(pictures[i]);
-    openBtn.classList[i].remove("hidden");
-    figcaption.classList[i].remove("hidden");
-    imageOverlay.classList[i].remove("hidden");
-    closeBtn.classList[i].add("hidden");
+  closeBtn.addEventListener("click", function () {
+    closeOnOutsideClick();
   });
 }
 
-// overlay.addEventListener("click", function () {
-//   closeImage();
-// });
+overlay.addEventListener("click", closeOnOutsideClick);
 
-// document.addEventListener("keydown", function (e) {
-//   if (e.key === "Escape") {
-//     closeImage();
-//   }
-// });
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closeOnOutsideClick();
+  }
+});

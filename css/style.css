@@ -553,8 +553,8 @@ body {
     font-size: 4rem;
     cursor: pointer;
     position: absolute;
-    top: 1rem;
-    right: 2rem;
+    top: 5rem;
+    right: 3rem;
     color: #fff;
     z-index: 110; }
     .gallery--close-btn:focus {
