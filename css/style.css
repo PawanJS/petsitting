@@ -553,9 +553,12 @@ body {
     font-size: 4rem;
     cursor: pointer;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 1rem;
+    right: 2rem;
+    color: #fff;
     z-index: 110; }
+    .gallery--close-btn:focus {
+      outline: none; }
 
 .pop-image {
   position: absolute;

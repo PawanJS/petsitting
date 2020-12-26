@@ -1,46 +1,45 @@
 "use script";
 
-const picture = document.querySelector(".gallery__item--1");
-const closeBtn = document.querySelector(".close-btn");
-const openBtn = document.querySelector(".gallery--link");
+const pictures = document.querySelectorAll(".gallery__item");
+const closeBtn = document.querySelectorAll(".close-btn");
+const openBtn = document.querySelectorAll(".gallery--link");
 const overlay = document.getElementById("overlay");
-const imageOverlay = document.querySelector(".gallery--overlay");
-const figcaption = document.querySelector(".gallery__img--description");
+const imageOverlay = document.querySelectorAll(".gallery--overlay");
+const figcaption = document.querySelectorAll(".gallery__img--description");
 
-const openImage = function () {
-  openBtn.classList.add("hidden");
-  figcaption.classList.add("hidden");
+const openImage = function (element) {
+  element.classList.add("pop-image");
   overlay.classList.add("active");
-  picture.classList.add("pop-image");
-  imageOverlay.classList.add("hidden");
-  closeBtn.classList.remove("hidden");
-  document.querySelector("body").style.overflow = "hidden";
 };
 
-const closeImage = function () {
-  openBtn.classList.remove("hidden");
-  figcaption.classList.remove("hidden");
+const closeImage = function (element) {
+  element.classList.remove("pop-image");
   overlay.classList.remove("active");
-  picture.classList.remove("pop-image");
-  imageOverlay.classList.remove("hidden");
-  closeBtn.classList.add("hidden");
-  document.querySelector("body").style.overflow = "auto";
 };
 
-openBtn.addEventListener("click", function () {
-  openImage();
-});
+for (let i = 0; i < pictures.length; i++) {
+  openBtn[i].addEventListener("click", function () {
+    openImage(pictures[i]);
+    openBtn[i].classList.add("hidden");
+    figcaption[i].classList.add("hidden");
+    imageOverlay[i].classList.add("hidden");
+    closeBtn[i].classList.remove("hidden");
+  });
+  closeBtn[i].addEventListener("click", function () {
+    closeImage(pictures[i]);
+    openBtn.classList[i].remove("hidden");
+    figcaption.classList[i].remove("hidden");
+    imageOverlay.classList[i].remove("hidden");
+    closeBtn.classList[i].add("hidden");
+  });
+}
 
-closeBtn.addEventListener("click", function () {
-  closeImage();
-});
+// overlay.addEventListener("click", function () {
+//   closeImage();
+// });
 
-overlay.addEventListener("click", function () {
-  closeImage();
-});
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    closeImage();
-  }
-});
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "Escape") {
+//     closeImage();
+//   }
+// });
