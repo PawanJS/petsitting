@@ -475,6 +475,7 @@ body {
   fill: currentColor; }
 
 .gallery {
+  position: relative;
   background-color: #ffffff;
   grid-column: center-start / center-end;
   padding: 10rem 0; }
@@ -546,6 +547,42 @@ body {
   .gallery__item:hover .gallery--overlay,
   .gallery__item:hover .gallery__img--description {
     opacity: 1; }
+  .gallery--close-btn {
+    background: none;
+    border: none;
+    font-size: 4rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 110; }
+
+.pop-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 100%; }
+
+.hidden {
+  display: none; }
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 90;
+  pointer-events: none;
+  transition: all 0.5s; }
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1; }
 
 .package {
   background-color: #f8f9fd;
@@ -843,6 +880,8 @@ body {
     color: #fff; }
   .veterinarian__box:hover .veterinarian__description > h5 {
     color: #000000; }
+  .veterinarian__box:hover .veterinarian__description > h4 {
+    color: #fff; }
   .veterinarian__box:hover .veterinarian__icon-box {
     bottom: 2rem;
     opacity: 1; }

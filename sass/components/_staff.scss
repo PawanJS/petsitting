@@ -113,6 +113,11 @@
   &__box:hover &__description > h5 {
     color: $color-dark;
   }
+
+  &__box:hover &__description > h4 {
+    color: $color-white;
+  }
+
   &__box:hover &__icon-box {
     bottom: 2rem;
     opacity: 1;

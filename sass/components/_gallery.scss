@@ -1,4 +1,5 @@
 .gallery {
+  position: relative;
   background-color: #ffffff;
   grid-column: center-start / center-end;
   padding: 10rem 0;
@@ -90,4 +91,48 @@
   &__item:hover &__img--description {
     opacity: 1;
   }
+
+  &--close-btn {
+    background: none;
+    border: none;
+    font-size: 4rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 110;
+  }
+}
+
+// * FOR MAKING IMAGE POP IN CLICK
+
+.pop-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($color-dark, 0.5);
+  z-index: 90;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+#overlay.active {
+  pointer-events: all;
+  opacity: 1;
 }
